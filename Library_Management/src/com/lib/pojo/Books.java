@@ -1,12 +1,17 @@
 package com.lib.pojo;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="books")
 @Entity
 public class Books {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int bookId;
 	private int invId;
 	private String bookName;

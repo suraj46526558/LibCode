@@ -1,11 +1,16 @@
 package com.lib.pojo;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="cd")
 @Entity
 public class Cds {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int cdId;
 	private int invId;
 	private String cdName;

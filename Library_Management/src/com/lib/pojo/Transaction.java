@@ -1,14 +1,18 @@
 package com.lib.pojo;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="transaction")
 @Entity
 public class Transaction {
 
-	private int txnId;
-	private String userId;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)	private int txnId;
+	private int userId;
 	private int invId;
 	private String txnType;
 	private String txnDate;
@@ -21,11 +25,11 @@ public class Transaction {
 		this.txnId = txnId;
 	}
 
-	public String getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 
