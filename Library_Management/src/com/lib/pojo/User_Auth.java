@@ -1,15 +1,20 @@
 package com.lib.pojo;
 
+import javax.persistence.Entity;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="user_auth")
+@Entity
 public class User_Auth {
 
-	private int userId;
+	private String  userId;
 	private String password;
 
-	public int getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(int userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 

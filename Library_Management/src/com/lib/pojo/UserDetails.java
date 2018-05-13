@@ -1,16 +1,27 @@
 package com.lib.pojo;
 
-public class userDetails {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
-	private int userId;
+
+
+@XmlRootElement(name = "UserDetails")
+@Entity
+@Table(name = "userdetails")
+public class UserDetails {
+
+	@Id
+	private String userId;
 	private String userName;
 	private String userType;
 
-	public int getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(int userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 

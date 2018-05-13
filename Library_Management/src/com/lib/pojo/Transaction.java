@@ -1,9 +1,14 @@
 package com.lib.pojo;
 
+import javax.persistence.Entity;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="transaction")
+@Entity
 public class Transaction {
 
 	private int txnId;
-	private int userId;
+	private String userId;
 	private int invId;
 	private String txnType;
 	private String txnDate;
@@ -16,11 +21,11 @@ public class Transaction {
 		this.txnId = txnId;
 	}
 
-	public int getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	public void setUserId(int userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 

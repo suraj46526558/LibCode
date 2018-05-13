@@ -1,5 +1,10 @@
 package com.lib.pojo;
 
+import javax.persistence.Entity;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="cd")
+@Entity
 public class Cds {
 	private int cdId;
 	private int invId;
