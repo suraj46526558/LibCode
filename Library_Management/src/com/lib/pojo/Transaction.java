@@ -11,7 +11,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Transaction {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)	private int txnId;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)	
+	private int txnId;
 	private int userId;
 	private int invId;
 	private String txnType;

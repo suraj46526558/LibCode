@@ -1,0 +1,36 @@
+===================
+Get User Details
+==================
+Operation:GET
+URL:http://localhost:8080/Library_Management/services/LibService/userService/users/2
+
+=========================
+Add User
+=========================
+Operation:POST
+URL:http://localhost:8080/Library_Management/services/LibService/userService/users/
+
+<UserDetails>
+<userName>suraj</userName>
+<userStatus>active</userStatus>
+<userType>A</userType>
+</UserDetails>
+
+=========================
+Update User Details
+=========================
+Operation:PUT
+URL:http://localhost:8080/Library_Management/services/LibService/userService/users/
+
+<UserDetails>
+<userId>2</userId>
+<userName>suraj</userName>
+<userStatus>active</userStatus>
+<userType>N</userType>
+</UserDetails>
+
+=========================
+DELETE User
+=========================
+Operation:DELETE
+URL:http://localhost:8080/Library_Management/services/LibService/userService/users/2
